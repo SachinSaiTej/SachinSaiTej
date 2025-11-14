@@ -1,0 +1,31 @@
+name: Generate GitHub Metrics
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          user: saitejakm
+          template: classic
+          config_timezone: Asia/Kolkata
+
+          # IMPORTANT: enables real contribution graph scraping
+          repositories_affiliations: owner, collaborator, organization_member
+          base: header, activity
+
+          # Output file
+          filename: github-metrics.svg
+
+          # Optional: show PRs, commits, etc.
+          plugin_activity: yes
+          plugin_activity_limit: 10
+          plugin_activity_days: 365
