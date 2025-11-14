@@ -26,17 +26,17 @@ jobs:
           # Core sections
           base: header, activity
 
-          # Count contributions from your work repos also
+          # Count contributions from your work repos
           repositories_affiliations: owner, collaborator, organization_member
 
           # Output svg
           filename: github-metrics.svg
 
-          # Show Pull Requests (created, merged, reviewed)
+          # Pull Request stats
           plugin_pullrequests: yes
           plugin_pullrequests_sections: created, merged, reviewed
 
-          # Show PR, commit & issue contributions summary
+          # Contribution stats (commits + PRs)
           plugin_contributors: yes
           plugin_contributors_sections: commits, pull_requests
           plugin_contributors_limit: 5
@@ -45,6 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           git add github-metrics.svg
           git commit -m "Update metrics" || echo "No changes"
           git push
