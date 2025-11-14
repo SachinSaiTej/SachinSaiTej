@@ -14,5 +14,37 @@ Eat ... CODE ... Sleep
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
-### 🛠️ Work Contribution Highlights (Real GitHub Activity)
-![Work Metrics](./github-metrics.svg)
+### 🛠️ Professional Contribution Summary @Wooqer
+<!-- ![Work Metrics](./github-metrics.svg) -->
+
+<!-- ## 📊 Work GitHub Stats (saitejakm) -->
+
+<div align="center">
+
+<!-- Work Stats Card -->
+<!-- <img src="./github-metrics.svg" width="100%" /> -->
+
+<!-- Divider -->
+<!-- <br><br> -->
+
+<!-- Contributions Summary Cards -->
+<table>
+  <tr>
+    <td align="center" width="250">
+      <h2>918</h2>
+      <p>Total Contributions</p>
+    </td>
+    <td align="center" width="250">
+      <img src="https://img.shields.io/badge/900%2B%20Commits-yellow?style=for-the-badge&labelColor=000&color=yellow" />
+      <p>Commits</p>
+    </td>
+    <td align="center" width="250">
+      <img src="https://img.shields.io/badge/300%2B%20PRs-blue?style=for-the-badge&labelColor=000&color=blue" />
+      <p>Pull Requests Created</p>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
