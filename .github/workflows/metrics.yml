@@ -23,13 +23,18 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
-          # Real contribution scraping
           base: header, activity
           repositories_affiliations: owner, collaborator, organization_member
 
-          # Output file
           filename: github-metrics.svg
 
-          # Extra stats (needs token)
           plugin_activity: yes
           plugin_activity_days: 365
+
+      - name: Commit metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          git commit -m "Update metrics" || echo "No changes"
+          git push
