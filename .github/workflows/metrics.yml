@@ -23,13 +23,23 @@ jobs:
           template: classic
           config_timezone: Asia/Kolkata
 
+          # Core sections
           base: header, activity
+
+          # Count contributions from your work repos also
           repositories_affiliations: owner, collaborator, organization_member
 
+          # Output svg
           filename: github-metrics.svg
 
-          plugin_activity: yes
-          plugin_activity_days: 365
+          # Show Pull Requests (created, merged, reviewed)
+          plugin_pullrequests: yes
+          plugin_pullrequests_sections: created, merged, reviewed
+
+          # Show PR, commit & issue contributions summary
+          plugin_contributors: yes
+          plugin_contributors_sections: commits, pull_requests
+          plugin_contributors_limit: 5
 
       - name: Commit metrics
         run: |
